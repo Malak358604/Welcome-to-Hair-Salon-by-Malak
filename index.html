@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Salon by Malak</title>
+    <style>
+     
+
+
+
+/* =================== GENERAL =================== */
+body {
+  margin: 0;
+  
+  background-image:url("https://static.vecteezy.com/system/resources/thumbnails/037/245/096/small/ai-generated-beauty-salon-advertisment-background-with-copy-space-free-photo.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;       /* les liens passent à la ligne si besoin */
+  justify-content: center; /* centre horizontalement */
+  margin-bottom: 40px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 10px 15px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+*{
+ 
+  text-align: center;      /* centre le texte à l’intérieur */
+}
+
+/* Overlay pour lisibilité */
+.overlay {
+  
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* =================== MENU =================== */
+nav {
+  margin-bottom: 40px;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  margin-right: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+}
+
+/* =================== TITRE =================== */
+h1 {
+  font-size: 36px;
+  opacity: 0;
+  text-align: center;
+}
+
+/* =================== SECTIONS =================== */
+section {
+  max-width: 400px;
+  color: black;
+}
+
+/* =================== PRESTATIONS =================== */
+button {
+  padding: 6px 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* =================== FORMULAIRE =================== */
+input, textarea {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border: 2px solid black;
+  box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  outline: none;
+}
+
+/* =================== FOOTER =================== */
+footer {
+  margin-top: 30px;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+<div class="image">
+    <img src="" >
+  </div>
+<div class="overlay">
+
+  <!-- MENU -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- CONTENU -->
+  <section>
+
+    <h1 id="titre">Welcome to Hair Salon by Malak</h1>
+
+    <h2>Nos Prestations</h2>
+
+    <p><strong>Coupe</strong><br>
+    Coiffure sur mesure<br>
+    200 DH
+    <button onclick="reserver(this)">Réserver</button>
+    </p>
+
+    <p><strong>Coloration</strong><br>
+    Teinture & balayage<br>
+    500 DH
+    <button onclick="reserver(this)">Réserver</button>
+    </p>
+    <p>
+  <strong>Brushing</strong><br>
+  Brushing professionnel<br>
+  150 DH
+  <button onclick="reserver(this)">Réserver</button>
+</p>
+
+<p>
+  <strong>Lissage</strong><br>
+  Lissage kératine<br>
+  800 DH
+  <button onclick="reserver(this)">Réserver</button>
+</p>
+
+<p>
+  <strong>Coiffure Mariée</strong><br>
+  Coiffure spéciale événement<br>
+  1200 DH
+  <button onclick="reserver(this)">Réserver</button>
+</p>
+
+<p>
+  <strong>Soin Capillaire</strong><br>
+  Soin réparateur et nourrissant<br>
+  300 DH
+  <button onclick="reserver(this)">Réserver</button>
+</p>
+
+
+    <h2>Contact Us</h2>
+
+    <p>
+      Adresse : 123 Rue, Rabat<br>
+      Tél : +212 06 22 33 44 55
+    </p>
+
+    <form>
+      <input type="text" placeholder="Nom">
+      <input type="email" placeholder="Email">
+      <textarea placeholder="Message"></textarea>
+      <button>Envoyer</button>
+    </form>
+
+    <footer>
+      © 2026 – Hair Salon by Malak
+    </footer>
+
+  </section>
+
+</div>
+
+<!-- =================== JAVASCRIPT =================== -->
+<script>
+// Animation titre (fade in)
+window.onload = function () {
+  let titre = document.getElementById("titre");
+  let opacity = 0;
+
+  let anim = setInterval(function () {
+    opacity += 0.05;
+    titre.style.opacity = opacity;
+
+    if (opacity >= 1) {
+      clearInterval(anim);
+    }
+  }, 50);
+};
+
+// Bouton réserver
+function reserver(btn) {
+  btn.innerText = "Réservé ✔";
+  btn.style.backgroundColor = "green";
+  btn.style.color = "white";
+}
+
+// Animation background légère
+setInterval(function () {
+  document.body.style.backgroundPosition =
+    Math.random() * 100 + "% " + Math.random() * 100 + "%";
+}, 5000);
+</script>
+
+</body>
+</html>
